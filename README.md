@@ -51,15 +51,19 @@ Directory:hdfs://ip-10-0-0-65.ec2.internal:8020/user/hive/warehouse/ecommerce.db
 Compression Type: SNAPPY
 Overwrite Files: false
 
-
-
+GenerateTableFetch
 Database Connection Pooling Service: DBCPConnectionPool
+Database Type: MySQL
 Table Name: Transaction
 Maximum-value Columns : InvoiceNo
 Output Empty FlowFile on Zero Results: false
 
+ExecuteSQL
 Database Connection Pooling Service: Database Connection Pooling Service
 Normalize Table/Column Names: false
 Use Avro Logical Types: false
 Compression Format: NONE
 Default Decimal Precision: 10 
+
+PutParquet
+
