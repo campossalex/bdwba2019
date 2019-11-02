@@ -47,7 +47,7 @@ Use CSV header line: false
 PutParquetTrx
 Hadoop Configuration Resources:/nifi/core-site.xml,/nifi/hdfs-site.xml
 Record Reader:AvroReader
-Directory:hdfs://ip-10-0-0-65.ec2.internal:8020/user/hive/warehouse/ecommerce.db/access_log
+Directory:hdfs://ip-10-0-0-65.ec2.internal:8020/user/hive/
 Compression Type: SNAPPY
 Overwrite Files: false
 
