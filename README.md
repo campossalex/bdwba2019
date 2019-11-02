@@ -1,27 +1,27 @@
 Confifguraciones:
 
-GetKafka
-ZooKeeper Connection String : 10.0.0.160:2181,10.0.0.137:2181,10.0.0.208:2181
-Topic Name : www.access_log
-Zookeeper Commit Frequency: 60 secs
-Batch Size: 1000
-Message Demarcator: \n
-Kafka Communications Timeout: 30 secs
-ZooKeeper Communications Timeout: 30 secs
+GetKafka 
+ZooKeeper Connection String : 10.0.0.160:2181,10.0.0.137:2181,10.0.0.208:2181 
+Topic Name : www.access_log  
+Zookeeper Commit Frequency: 60 secs 
+Batch Size: 1000 
+Message Demarcator: \n 
+Kafka Communications Timeout: 30 secs 
+ZooKeeper Communications Timeout: 30 secs 
 
-Extract Text
-Character Set: UTF-8
-access_log: ^(\S+) \S+ \S+ \[([^\[]+)\] "(\w+) (\S+) (\S+)" (\d+) (\d+) "([^"]+)" "([^"]+)".*
-ip_origen: ^(\S+)
-method: ^\S+ \S+ \S+ \[[^\[]+\] "(\w+)
-time_local: ^\S+ \S+ \S+ \[([^\[]+)\]
+Extract Text 
+Character Set: UTF-8 
+access_log: ^(\S+) \S+ \S+ \[([^\[]+)\] "(\w+) (\S+) (\S+)" (\d+) (\d+) "([^"]+)" "([^"]+)".* 
+ip_origen: ^(\S+) 
+method: ^\S+ \S+ \S+ \[[^\[]+\] "(\w+) 
+time_local: ^\S+ \S+ \S+ \[([^\[]+)\] 
 
 
-ReplaceText
-Search Value: (?s)(^.*$)
-Replacement Value: ${access_log.1}|${access_log.2}|${access_log.3}|${access_log.4}|${access_log.5}|${access_log.6}|${access_log.7}|${access_log.8}|${access_log.9}
-Replacement Strategy: Regex Replace
-Evaluation Mode: Entire text
+ReplaceText 
+Search Value: (?s)(^.*$) 
+Replacement Value: ${access_log.1}|${access_log.2}|${access_log.3}|${access_log.4}|${access_log.5}|${access_log.6}|${access_log.7}|${access_log.8}|${access_log.9} 
+Replacement Strategy: Regex Replace 
+Evaluation Mode: Entire text 
 
 
 ConvertCSVToAvro
